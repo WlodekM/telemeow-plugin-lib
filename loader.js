@@ -5,7 +5,7 @@ async function main() {
     window.libman = true // i am... libman
     const libs = window.libs = {
         libs: new Map(),
-        async use(name, url="https://github.com/WlodekM/telemeow-plugin-lib/raw/refs/heads/main/libs/"+name+".js") { // TODO: host on cf
+        async use(name, url="https://telemeow-plugin-lib.pages.dev/libs/"+name+".js") {
             if(libs.libs.has(name)) return libs.libs.get(name); // libs.libs.libs.lib[lib](lib).getLib(lib).lib
             const lib = (await import(url)).default;
             libs.libs.set(name, lib)
