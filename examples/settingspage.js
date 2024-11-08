@@ -1,6 +1,6 @@
 libs.use("settings")
 
-settings.addSettingsPage("test", {
+window.settings.addSettingsPage("test", {
     displayName: "Test settings page",
     func () {
         // Scrolls to top
