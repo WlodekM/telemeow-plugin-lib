@@ -19,7 +19,7 @@ export default new class {
         window.settingsPages = this.settingsPages
     
         // logCategory("API", "#9400D3", "Doing mixin for settings pages")
-        loadstgs = mixins.mixin(loadstgs, function (stg) {
+        loadstgs = window.mixins.mixin(loadstgs, function (stg) {
             stg()
             navc = document.querySelector(".nav-top");
             for (pageid in this.settingsPages) {
