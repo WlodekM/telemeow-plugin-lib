@@ -16,7 +16,7 @@ export default new class {
         this.settingsPages[name] = page
     }
     onload() {
-        window.settingsPages = settingsPages
+        window.settingsPages = this.settingsPages
     
         // logCategory("API", "#9400D3", "Doing mixin for settings pages")
         loadstgs = mixins.mixin(loadstgs, function (stg) {
