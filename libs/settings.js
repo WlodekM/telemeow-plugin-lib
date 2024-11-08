@@ -19,13 +19,13 @@ export default new class {
         window.settingsPages = this.settingsPages
     
         // logCategory("API", "#9400D3", "Doing mixin for settings pages")
-        loadstgs = window.mixins.mixin(loadstgs, function (stg) {
+        settingsPage = window.mixins.mixin(settingsPage, function (stg) {
             stg()
-            navc = document.querySelector(".nav-top");
             for (pageid in this.settingsPages) {
                 const pageData = this.settingsPages[pageid];
-                navc.innerHTML += `
-            <input type='button' class='settings-button button' id='submit' value='${pageData.displayName.replaceAll("'", "&apos;")}' onclick='window.settingsPages.${pageid}.func()' aria-label="${pageid}">`
+                // oh no way we now have a variable for the page content!
+                content.innerHTML += `
+            <div class="menu-button" onclick="window.settingsPages.${pageid}.func()" aria-label="${pageid}"><span>${pageData.displayName.replaceAll("<", "&lt;")}</span>${icon.arrow}</div>`
             }
         });
     }
