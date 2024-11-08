@@ -1,4 +1,4 @@
-libs.use("mixins")
+await libs.use("mixins")
 
 // code mostly stolen from wl plugins (rip)
 
